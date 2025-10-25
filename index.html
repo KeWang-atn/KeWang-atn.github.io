@@ -1,211 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ke Wang — Academic Homepage</title>
-  <meta name="description" content="Ke Wang — academic homepage: research, publications, projects, teaching, and contact." />
+  <meta name="description" content="Ke Wang — Graduate Researcher at PDOL Lab, Simon Fraser University">
   <meta name="color-scheme" content="light dark" />
 
-  <!-- 页面描述信息与社交媒体预览配置 -->
-  <meta property="og:title" content="Ke Wang — Academic Homepage" />
-  <meta property="og:description" content="Research, publications, projects, and contact." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kewang-atn.github.io/" />
-
-  <!-- 页面样式定义（含浅色/深色模式支持） -->
   <style>
-    /* 定义颜色主题变量 */
-    :root{
-      --bg: #ffffff;
-      --fg: #0f172a;
-      --muted: #475569;
-      --accent: #2563eb;
-      --accent-2: #0ea5e9;
-      --card: #f8fafc;
-      --border: #e2e8f0;
-      --code-bg: #f1f5f9;
-    }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg: #0b0f19;
-        --fg: #e5e7eb;
-        --muted: #94a3b8;
-        --accent: #60a5fa;
-        --accent-2: #38bdf8;
-        --card: #0f172a;
-        --border: #1f2937;
-        --code-bg: #111827;
-      }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 40px auto;
+      max-width: 900px;
+      line-height: 1.6;
+      color: #222;
+      padding: 0 10px;
+      background: #ffffff;
     }
 
-    /* 全局样式 */
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; line-height: 1.6; }
-
-    .wrap { max-width: 1000px; margin: 0 auto; padding: 24px; }
-
-    /* 顶部个人信息布局 */
-    header { display: grid; grid-template-columns: 110px 1fr; gap: 24px; align-items: center; margin-top: 18px; }
-    header img { width: 110px; height: 110px; border-radius: 16px; object-fit: cover; border: 1px solid var(--border); background: var(--card); }
-
-    /* 标题样式 */
-    h1 { font-size: 2rem; margin: 0 0 6px; }
-    h2 { font-size: 1.4rem; margin: 40px 0 8px; padding-top: 24px; border-top: 1px solid var(--border); }
-    h3 { margin: 16px 0 4px; font-size: 1.05rem; }
-
-    .muted { color: var(--muted); }
-
-    /* 导航栏样式 */
-    .nav { position: sticky; top: 0; backdrop-filter: saturate(180%) blur(10px); background: color-mix(in srgb, var(--bg) 85%, transparent); border-bottom: 1px solid var(--border); }
-    .nav .wrap { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
-    .nav a { text-decoration: none; color: var(--muted); padding: 12px 0; border-bottom: 2px solid transparent; }
-    .nav a:hover, .nav a:focus { color: var(--fg); border-color: var(--accent); }
-
-    /* 按钮样式 */
-    .btns a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; border: 1px solid var(--border); background: var(--card); padding: 6px 10px; border-radius: 10px; color: var(--fg); font-size: 0.95rem; }
-    .btns a:hover { border-color: var(--accent); }
-
-    /* 网格卡片布局 */
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-    .card { border: 1px solid var(--border); background: var(--card); border-radius: 14px; padding: 14px; }
-
-    /* 论文展示区样式 */
-    .pub { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 14px 0; border-bottom: 1px dashed var(--border); }
-    .pub:last-child { border: none; }
-    .badges a{ font-size: 0.85rem; text-decoration: none; border: 1px solid var(--border); padding: 2px 8px; border-radius: 999px; margin-right: 6px; color: var(--fg); background: var(--card); }
-    .badges a:hover{ border-color: var(--accent); }
-
-    /* 代码与页脚 */
-    code, pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 2px 6px; }
-    footer { margin: 40px 0 20px; font-size: 0.95rem; color: var(--muted); }
-
-    /* 打印优化 */
-    @media print{
-      .nav, .btns { display:none; }
-      h2 { border: none; }
-      a { color: inherit; text-decoration: none; }
-      .card { break-inside: avoid; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0b0f19; color: #e5e7eb; }
+      a { color: #60a5fa; }
     }
+
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { text-align: center; margin-bottom: 10px; }
+    img.profile {
+      float: right;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-left: 20px;
+      border: 1px solid #ccc;
+    }
+
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .links {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+
+    .links a { margin: 0 6px; }
+
+    .section-title {
+      font-size: 1.5em;
+      margin-top: 50px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .news-item { margin: 10px 0; }
   </style>
 </head>
 <body>
-  <!-- 顶部导航栏 -->
-  <div class="nav">
-    <div class="wrap">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#projects">Projects</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#service">Service</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-    </div>
+
+  <h1>Ke Wang</h1>
+
+  <!-- 个人头像占位符 -->
+  <img src="assets/profile.jpg" alt="Profile Photo" class="profile">
+
+  <p>
+    I am a Graduate Researcher at the <strong>Product Design & Optimization Lab (PDOL)</strong>, <strong>Simon Fraser University</strong>.
+    My research focuses on <em>AI-driven generative design</em>, <em>diffusion models</em>, and <em>graph-based modeling</em> for engineering design optimization.
+  </p>
+
+  <p>
+    I am passionate about integrating machine learning with physics-based design processes to accelerate innovation in naval architecture and structural optimization. My work explores conditional diffusion models, graph neural networks, and mesh-based generative frameworks for performance-guided design synthesis.
+  </p>
+
+  <!-- 链接行 -->
+  <div class="links">
+    <a href="mailto:ke.wang@sfu.ca">Email</a> /
+    <a href="cv/Ke_Wang_CV.pdf" target="_blank">CV (PDF)</a> /
+    <a href="https://scholar.google.com/citations?user=ARF5Or0AAAAJ/" target="_blank">📚 Google Scholar</a> /
+    <a href="https://orcid.org/0009-0003-0003-1827" target="_blank">🟢 ORCID</a> /
+    <a href="https://github.com/kewang-atn" target="_blank">💻 GitHub</a>
   </div>
 
-  <!-- 主体内容区 -->
-  <main class="wrap">
-    <!-- 个人简介部分 -->
-    <header>
-      <img src="assets/profile.jpg" alt="Profile photo placeholder" />
-      <div>
-        <h1>Ke Wang</h1>
-        <div class="muted">Graduate Researcher, Product Design & Optimization Lab (PDOL), Simon Fraser University</div>
-        <p style="margin-top:10px">My research interests include <strong>AI for Engineering Design</strong>, especially <em>generative design</em> with diffusion models and graph neural networks, mesh/graph generation, and performance-guided conditional generation for naval architecture and structural design.</p>
-        <div class="btns" style="margin-top:12px">
-          <a href="#contact">✉️ Email</a>
-          <a href="https://scholar.google.com/citations?user=ARF5Or0AAAAJ/" target="_blank">📚 Google Scholar</a>
-          <a href="https://orcid.org/0009-0003-0003-1827" target="_blank">🟢 ORCID</a>
-          <a href="https://github.com/kewang-atn" target="_blank">💻 GitHub</a>
-          <a href="cv/Ke_Wang_CV.pdf" target="_blank">🧾 CV (PDF)</a>
-        </div>
-      </div>
-    </header>
+  <!-- News 区块 -->
+  <h2 class="section-title">News</h2>
+  <div class="news">
+    <div class="news-item">2025/10 — <em>[Reserved for update]</em> Paper revision on RePaint-guided conditional diffusion.</div>
+    <div class="news-item">2025/07 — <em>[Reserved for update]</em> Reading “Score-Based Generative Modeling through SDEs”.</div>
+    <div class="news-item">2025/05 — <em>[Reserved for update]</em> Presented results at PDOL group meeting.</div>
+  </div>
 
-    <!-- About 部分 -->
-    <section id="about">
-      <h2>About</h2>
-      <p>I am a graduate student in the PDOL lab advised by <a href="#">Prof. Gary Wang</a>. I work on data- and physics-informed generative models for engineering design, including <strong>conditional DDPM/RePaint</strong> for parametric hull design, <strong>graph diffusion</strong> for mesh and beam structures, and <strong>tabular generative modeling</strong> for design optimization.</p>
-    </section>
+  <footer style="margin-top:60px; text-align:center; font-size:0.9em; color:#666;">
+    © <span id="year"></span> Ke Wang — Last updated <span id="updated"></span>
+  </footer>
 
-    <!-- Research Interests -->
-    <section id="research">
-      <h2>Research Interests</h2>
-      <div class="grid">
-        <div class="card"><h3>Generative Design</h3><p>Diffusion models (DDPM, SDE, flow matching) and conditional guidance (RePaint, feasibility, performance predictors) for parameterized engineering designs.</p></div>
-        <div class="card"><h3>Graph/mesh modeling</h3><p>Graph diffusion, GNNs, and image-to-graph meshing pipelines for structure synthesis and topology optimization.</p></div>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-      <h2>Selected Publications</h2>
-      <div class="pub">
-        <div>
-          <strong>RePaint-Guided Conditional Diffusion for Parametric Hull Design</strong><br/>
-          Ke Wang, <em>et al.</em><br/>
-          <span class="muted">Under review, 2025</span>
-          <div class="badges"><a href="#">PDF</a><a href="#">Code</a></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card"><h3>ShipGen</h3><p>Performance-guided hull generation with parameter fixing and RePaint sampling.</p></div>
-        <div class="card"><h3>GDSS</h3><p>Graph-based generative modeling for beams/meshes.</p></div>
-      </div>
-    </section>
-
-    <!-- Teaching -->
-    <section id="teaching">
-      <h2>Teaching</h2>
-      <ul>
-        <li>Guest Lectures: Generative AI for Engineering Design (Diffusion & GNNs).</li>
-      </ul>
-    </section>
-
-    <!-- Service -->
-    <section id="service">
-      <h2>Service</h2>
-      <ul>
-        <li>Reviewer: IDETC-CIE (Design Automation).</li>
-      </ul>
-    </section>
-
-    <!-- News -->
-    <section id="news">
-      <h2>News</h2>
-      <ul>
-        <li><strong>[2025-10]</strong> Paper revision in progress; added sensitivity analyses.</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <span id="em"></span></p>
-      <p><strong>Address:</strong> Product Design & Optimization Lab (PDOL), Simon Fraser University</p>
-    </section>
-
-    <!-- 页脚 -->
-    <footer>
-      © <span id="year"></span> Ke Wang. Last updated <span id="updated"></span>.
-    </footer>
-  </main>
-
-  <!-- 页面动态脚本：邮箱拼接与日期更新 -->
   <script>
-    // 邮箱防爬虫拼接
-    const user = "ke.wang";
-    const host = "sfu.ca";
-    document.getElementById('em').textContent = user + "@" + host;
-
-    // 自动更新年份与修改日期
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('updated').textContent = new Date().toISOString().slice(0,10);
   </script>
+
 </body>
 </html>
