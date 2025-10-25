@@ -8,22 +8,21 @@
   <meta name="color-scheme" content="light dark" />
 
   <style>
+    /* 🌙 全局深色主题 */
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       margin: 40px auto;
       max-width: 900px;
       line-height: 1.6;
-      color: #222;
+      color: #e5e7eb;                  /* 主体文字浅灰 */
       padding: 0 10px;
-      background: #ffffff;
+      background: #0d1117;             /* 背景：深蓝黑 */
     }
 
-    @media (prefers-color-scheme: dark) {
-      body { background: #0b0f19; color: #e5e7eb; }
-      a { color: #60a5fa; }
-    }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; color: #79c0ff; }
 
-    /* 采用左右两栏布局 */
+    /* 分栏布局 */
     .container {
       display: flex;
       flex-direction: row;
@@ -41,72 +40,113 @@
       flex: 0 0 220px;
     }
 
-    /* h1 在左列中居中 */
+    /* 标题 */
     h1 {
       text-align: center;
       margin-bottom: 5px;
       font-size: 3em;
+      color: #ffffff;
     }
 
+    .section-title {
+      font-size: 1.5em;
+      margin-top: 50px;
+      border-bottom: 1px solid #30363d; /* 柔和分隔线 */
+      padding-bottom: 5px;
+      color: #f0f6fc;
+    }
+
+    /* 头像样式 */
     img.profile {
       width: 200px;
       height: 300px;
       object-fit: cover;
       border-radius: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #30363d;
       margin-top: 50px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.05);
     }
 
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
+    /* 链接区 */
     .links {
       text-align: center;
       margin-top: 10px;
       margin-bottom: 40px;
     }
-
-    .links a { margin: 0 6px; }
-
-    .section-title {
-      font-size: 1.5em;
-      margin-top: 50px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
+    .links a {
+      margin: 0 6px;
+      color: #9ecbff;
+      border-bottom: 1px dotted transparent;
+    }
+    .links a:hover {
+      color: #58a6ff;
+      border-bottom: 1px dotted #58a6ff;
     }
 
-    .news-item { margin: 10px 0; }
+    /* Publications & News */
+    .pub-item, .news-item, .project {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 8px 0;
+        margin: 10px 0;
+        border-bottom: 1px solid #30363d; /* 底部分隔线，更干净 */
+        }
+
+    .pub-links a {
+      font-size: 0.9em;
+      margin-right: 8px;
+      border: 1px solid #30363d;
+      padding: 2px 6px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #9ecbff;
+    }
+    .pub-links a:hover {
+      border-color: #58a6ff;
+      color: #58a6ff;
+    }
+
+    em, strong { color: #f0f6fc; }
+
+    /* 页脚 */
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #8b949e;
+    }
+
     /* ---------- 移动端优化 ---------- */
     @media (max-width: 768px) {
-    .container {
-        flex-direction: column;        /* 改为上下布局 */
-        align-items: center;           /* 内容居中 */
-    }
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-    .left-column {
-        max-width: 100%;               /* 占满宽度 */
-        text-align: center;            /* 让简介居中更美观 */
-    }
+      .left-column {
+        max-width: 100%;
+        text-align: center;
+      }
 
-    .right-column {
-        margin-top: 20px;              /* 头像下移 */
-    }
+      .right-column {
+        margin-top: 20px;
+      }
 
-    img.profile {
-        width: 70%;                    /* 头像自动缩小 */
+      img.profile {
+        width: 70%;
         height: auto;
         margin-top: 10px;
-    }
+      }
 
-    h1 {
-        font-size: 2.2em;              /* 标题略微缩小 */
-    }
+      h1 {
+        font-size: 2.2em;
+      }
 
-    body {
-        padding: 0 16px;               /* 增加左右留白 */
+      body {
+        padding: 0 16px;
+      }
     }
-}
-
   </style>
   
 </head>
