@@ -23,15 +23,35 @@
       a { color: #60a5fa; }
     }
 
-    h1, h2, h3 { line-height: 1.2; }
-    h1 { text-align: center; margin-bottom: 10px; }
+    /* 采用左右两栏布局 */
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .left-column {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .right-column {
+      flex: 0 0 220px;
+    }
+
+    /* h1 在左列中居中 */
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
     img.profile {
-      float: right;
       width: 200px;
-      height: 200px;
+      height: 300px;
       object-fit: cover;
       border-radius: 10px;
-      margin-left: 20px;
       border: 1px solid #ccc;
     }
 
@@ -58,19 +78,26 @@
 </head>
 <body>
 
-  <h1>Ke Wang</h1>
+  <div class="container">
+    <!-- 左侧：标题与文字部分 -->
+    <div class="left-column">
+      <h1>Ke Wang</h1>
 
-  <!-- 个人头像占位符 -->
-  <img src="assets/profile.jpg" alt="Profile Photo" class="profile">
+      <p>
+        I am a Graduate Researcher at the <strong>Product Design & Optimization Lab (PDOL)</strong>, <strong>Simon Fraser University</strong>.
+        My research focuses on <em>AI-driven generative design</em>, <em>diffusion models</em>, and <em>graph-based modeling</em> for engineering design optimization.
+      </p>
 
-  <p>
-    I am a Graduate Researcher at the <strong>Product Design & Optimization Lab (PDOL)</strong>, <strong>Simon Fraser University</strong>.
-    My research focuses on <em>AI-driven generative design</em>, <em>diffusion models</em>, and <em>graph-based modeling</em> for engineering design optimization.
-  </p>
+      <p>
+        I am passionate about integrating machine learning with physics-based design processes to accelerate innovation in naval architecture and structural optimization. My work explores conditional diffusion models, graph neural networks, and mesh-based generative frameworks for performance-guided design synthesis.
+      </p>
+    </div>
 
-  <p>
-    I am passionate about integrating machine learning with physics-based design processes to accelerate innovation in naval architecture and structural optimization. My work explores conditional diffusion models, graph neural networks, and mesh-based generative frameworks for performance-guided design synthesis.
-  </p>
+    <!-- 右侧：头像 -->
+    <div class="right-column">
+      <img src="img\Personal_img.jpg" alt="Profile Photo" class="profile">
+    </div>
+  </div>
 
   <!-- 链接行 -->
   <div class="links">
